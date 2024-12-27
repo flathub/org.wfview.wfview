@@ -1,6 +1,6 @@
 app-id: org.wfview.wfview
 runtime: org.kde.Platform
-runtime-version: '5.15-24.08'
+runtime-version: 5.15-24.08
 sdk: org.kde.Sdk
 command: wfview
 rename-desktop-file: wfview.desktop
@@ -52,7 +52,7 @@ modules:
           type: anitya
           project-id: 10227
           stable-only: true
-          versions: {'<': '6'}
+          versions: {<: '6'}
           url-template: https://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-$version.tar.gz
 
   - name: qcustomplot
@@ -86,8 +86,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/eliggett/wfview.git
-        tag: v1.64
-        commit: b4c079f7f46d0a7c2399dd1c52af13fc60bc5bdb
+        tag: v2.00
+        commit: 18458dc442ae1c5e0e5efd751ffbb6060e072bee
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
