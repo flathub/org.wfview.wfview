@@ -1,9 +1,10 @@
 app-id: org.wfview.wfview
 runtime: org.kde.Platform
-runtime-version: '5.15-24.08'
+runtime-version: 5.15-24.08
 sdk: org.kde.Sdk
 command: wfview
 rename-desktop-file: wfview.desktop
+rename-icon: wfview
 finish-args:
   - --device=all
   - --share=network
@@ -52,7 +53,7 @@ modules:
           type: anitya
           project-id: 10227
           stable-only: true
-          versions: {'<': '6'}
+          versions: {<: '6'}
           url-template: https://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-$version.tar.gz
 
   - name: qcustomplot
@@ -86,21 +87,13 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/eliggett/wfview.git
-        tag: v1.64
-        commit: b4c079f7f46d0a7c2399dd1c52af13fc60bc5bdb
+        tag: v2.01
+        commit: 7c40060ed865e94947f3596324fb88228cec9bac
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
       - type: patch
-        path: wfview-fix-pmr-channel-spacing.patch
+        path: metainfo.patch
       - type: shell
         commands:
           - mv wfserver.pro wfserver.pro.disabled
-      - type: file
-        path: org.wfview.wfview.png
-      - type: file
-        path: org.wfview.wfview.metainfo.xml
-    post-install:
-      - install -Dm644 org.wfview.wfview.png /app/share/icons/hicolor/256x256/apps/org.wfview.wfview.png
-      - desktop-file-edit --set-key="Icon" --set-value="org.wfview.wfview" /app/share/applications/wfview.desktop
-      - install -Dm644 org.wfview.wfview.metainfo.xml /app/share/metainfo/org.wfview.wfview.metainfo.xml

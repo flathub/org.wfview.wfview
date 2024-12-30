@@ -1,0 +1,14 @@
+diff --git a/resources/org.wfview.wfview.metainfo.xml b/resources/org.wfview.wfview.metainfo.xml
+index b2b10fd..3334dfe 100644
+--- a/resources/org.wfview.wfview.metainfo.xml
++++ b/resources/org.wfview.wfview.metainfo.xml
+@@ -25,5 +25,9 @@
+   </screenshots>
+   <url type="homepage">https://wfview.org</url>
+   <url type="bugtracker">https://gitlab.com/eliggett/wfview/-/issues</url>
++  <releases>
++    <release version="2.01" date="2024-12-29"/>
++    <release version="1.64" date="2023-07-16"/>
++  </releases>
+   <content_rating type="oars-1.1"/>
+ </component>
