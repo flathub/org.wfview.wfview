@@ -21,8 +21,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://gitlab.com/libeigen/eigen/-/archive/5.0.0/eigen-5.0.0.tar.bz2
-        sha256: 4b9875419e27f3bab28f28e8e07e0c1eaeb2852653c5d275738e8cdd476ffe73
+        url: https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.bz2
+        sha256: e4de6b08f33fd8b8985d2f204381408c660bffa6170ac65b68ae1bd3cd575c0a
         x-checker-data:
           type: anitya
           project-id: 13751
