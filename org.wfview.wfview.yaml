@@ -14,8 +14,6 @@ finish-args:
   - --socket=wayland
 
 modules:
-  - shared-modules/libusb/libusb.json
-
   - name: eigen3
     buildsystem: cmake-ninja
     builddir: true
