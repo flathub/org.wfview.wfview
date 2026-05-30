@@ -85,8 +85,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/eliggett/wfview.git
-        tag: v2.22
-        commit: 8acfde0b0f6feb1163e80bd1ebd5658b768d3d84
+        tag: v2.23
+        commit: cd18ea55fe479eb4526d1732b443cbfc3969c540
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
