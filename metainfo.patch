@@ -1,12 +1,21 @@
+---
+ resources/org.wfview.wfview.metainfo.xml | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
 diff --git a/resources/org.wfview.wfview.metainfo.xml b/resources/org.wfview.wfview.metainfo.xml
-index b2b10fd6..054d7f70 100644
+index b2b10fd..40a6e92 100644
 --- a/resources/org.wfview.wfview.metainfo.xml
 +++ b/resources/org.wfview.wfview.metainfo.xml
-@@ -25,5 +25,14 @@
+@@ -24,6 +24,18 @@
+     </screenshot>
    </screenshots>
    <url type="homepage">https://wfview.org</url>
-   <url type="bugtracker">https://gitlab.com/eliggett/wfview/-/issues</url>
+-  <url type="bugtracker">https://gitlab.com/eliggett/wfview/-/issues</url>
++  <url type="bugtracker">https://github.com/wf-group/wfview/-/issues</url>
++  <url type="vcs-browser">https://github.com/wf-group/wfview</url>
 +  <releases>
++    <release version="2.25" date="2026-09-27"/>
++    <release version="2.24" date="2026-06-25"/>
 +    <release version="2.23" date="2026-05-29"/>
 +    <release version="2.22" date="2026-05-23"/>
 +    <release version="2.11" date="2025-05-10"/>
@@ -17,3 +26,6 @@ index b2b10fd6..054d7f70 100644
 +  </releases>
    <content_rating type="oars-1.1"/>
  </component>
+--
+libgit2 1.9.7
+
