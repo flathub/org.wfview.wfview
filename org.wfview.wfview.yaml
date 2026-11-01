@@ -12,11 +12,19 @@ finish-args:
   - --socket=pulseaudio
   - --socket=fallback-x11
   - --socket=wayland
+cleanup:
+  - /include
+  - /lib/cmake
+  - /lib/pkgconfig
+  - "*.la"
+  - "*.a"
 
 modules:
   - name: eigen3
     buildsystem: cmake-ninja
     builddir: true
+    cleanup:
+      - '*'
     sources:
       - type: archive
         url: https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.bz2
@@ -26,8 +34,6 @@ modules:
           project-id: 13751
           stable-only: true
           url-template: https://gitlab.com/libeigen/eigen/-/archive/${version}/eigen-${version}.tar.bz2
-    cleanup:
-      - '*'
 
   - name: portaudio
     sources:
@@ -44,15 +50,14 @@ modules:
       - --disable-static
       - --enable-shared
     sources:
-      - type: archive
-        url: https://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-5.2.0.tar.gz
-        sha256: d6089c214e5dbff136ab21f3f5efc284e93475ebd198c54d4b9b6c44419ef4e6
+      - type: git
+        url: https://github.com/thestk/rtaudio.git
+        tag: 5.2.0
+        commit: 46b01b5b134f33d8ddc3dab76829d4b1350e0522
         x-checker-data:
-          type: anitya
-          project-id: 10227
-          stable-only: true
+          type: git
+          tag-pattern: ^([\d.]+)$
           versions: {<: '6'}
-          url-template: https://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-$version.tar.gz
 
   - name: qcustomplot
     buildsystem: cmake-ninja
@@ -84,9 +89,9 @@ modules:
       - LIBS += /app/lib/libQCustomPlot.so
     sources:
       - type: git
-        url: https://gitlab.com/eliggett/wfview.git
-        tag: v2.23
-        commit: cd18ea55fe479eb4526d1732b443cbfc3969c540
+        url: https://github.com/wf-group/wfview.git
+        tag: v2.25
+        commit: 098568546731aff25c7e9ea93c0f009eeee19137
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
